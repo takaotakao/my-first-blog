@@ -1,0 +1,42 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+                	<div class="post">
+                   		 <div class="date">
+                      		  <p>published: {{posts}}</p>
+                   		 </div>
+               		 </div>
+
+
+  <div class='b1'>
+    <p>
+      時刻は：{{ time }}<br>入力されたテキストは：{{ text }}
+    </p>
+  </div>
+
+
+  <div class='c1'>
+    <form action="exercise" method="POST" >
+      {% csrf_token %}
+      <h3>入力テキスト</h3>
+      <textarea class="form-control" id="input_text" name="input_text" rows="1" required>{{ input_text }}</textarea>
+      <h3>入力テキスト2</h3>
+      <textarea class="form-control2" id="input_text2" name="input_text2" rows="1" required>{{ input_text2 }}</textarea>      
+      
+      <button type="submit" name="submit" value="送信" style="background-color: #bcbcff" >
+        <font size="5">送信</font>
+      </button>
+
+    </form>
+  </div>
+
+
+    <script type="text/javascript">
+      alert("Hello");
+    </script>
+
+
+
+
+
+{% endblock %}

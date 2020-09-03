@@ -1,0 +1,121 @@
+{% load static %}
+
+<html lang="ja"><!--★ここ変更している22>-->
+    <head>
+        <title>Django Girls blog2</title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+		<link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" href="{% static 'css/blog.css' %}">
+		
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+		
+    </head>
+<body>
+
+ 
+   
+    <div class="page-header">
+    	{% if user.is_authenticated %}
+   			 <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+		{% endif %}
+        <h1><a href="/">HTSライズCS事業部のTODOリスト</a></h1>
+    </div>
+    
+
+
+
+    <!--
+
+<div class="box5">
+    
+    
+    <div class="content container">
+        <div class="row">
+            <div class="col-md-8">
+            {% block content %}
+            {% endblock %}
+            </div>
+        </div>
+    </div>
+</div>
+
+--!>
+
+<!--
+
+
+    <div class="page-header">
+    	{% if user.is_authenticated %}
+   			 <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+		{% endif %}
+        <h1><a href="/">コメント記入欄（python）</a></h1>
+    </div>
+
+
+
+ <table border="0">
+  <tr>
+    <td align="right"><b> 出発地：</b></td>
+    <td><input type="text" name="textBox1" id="id_textBox1"  size="30" maxlength="20" value="<?=$address ?>"></td>
+  </tr>
+  <tr>
+    <td align="right"><b> 経由地１：</b></td>
+    <td><input type="text"  name="tBox1" id="id_tBox1"  name="pass" size="30" maxlength="20"></td>
+  </tr>
+  <tr>
+    <td align="right"><b> 経由地２：</b></td>
+    <td><input type="text"  name="tBox2" id="id_tBox2"  name="pass" size="30" maxlength="20"></td>
+  </tr>
+  <tr>
+    <td align="right"><b> 経由地３：</b></td>
+    <td><input type="text"  name="tBox3" id="id_tBox3"  name="pass" size="30" maxlength="20"></td>
+  </tr>
+  <tr>
+    <td align="right"><b> 到着地：</b></td>
+    <td><input type="text"  name="tBoxEnd" id="id_tBoxEnd"  name="pass" size="30" maxlength="20"></td>
+  </tr>
+  <tr>
+    <td align="right"><b>台数：</b></td>
+    <td>
+      <input type="radio" name="gakunen" value="１年生">１
+      <input type="radio" name="gakunen" value="２年生">２
+      <input type="radio" name="gakunen" value="３年生">３
+      <input type="radio" name="gakunen" value="４年生">４
+      <input type="radio" name="gakunen" value="５年生">５
+      <input type="radio" name="gakunen" value="６年生">６
+    </td>
+  </tr>
+  <tr>
+    <td align="right"><b>積荷：</b></td>
+    <td>
+      <input type="checkbox" name="kamoku" value="国語">多
+      <input type="checkbox" name="kamoku" value="英語">中
+      <input type="checkbox" name="kamoku" value="算数">少
+    </td>
+  </tr>
+  <tr>
+    <td align="right"><b>経路：</b></td>
+    <td><input type="file" name="syukudai"></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>
+      <input type="submit" value="送信">
+      <input type="reset" value="リセット">
+    </td>
+  </tr>
+  </table>
+  </form>
+ </div>
+</div>
+
+
+--!>
+
+</body>
+</html>

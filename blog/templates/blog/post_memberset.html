@@ -1,0 +1,14 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+<div id="content" class="colM">
+    <h1>編集（”,”で区切って名前を入力して下さい）</h1>
+    <form method="POST" class="post-form">{% csrf_token %}
+        {{ form.as_p }}
+        <p>関連メンバ：</p>
+        <button type="submit" class="save btn btn-default">関連メンバ登録</button>  <!-- これを押したら別画面へ遷移させたい -->
+        <button type="submit" class="save btn btn-default">Save</button><!-- 押した後は、呼び元のVIEWに戻ります。-->
+    </form>
+
+</div>
+{% endblock %}

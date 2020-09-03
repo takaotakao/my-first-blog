@@ -1,0 +1,17 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+<div id="content" class="colM">
+    <h1>編集</h1>
+    <form method="POST" class="post-form">{% csrf_token %}
+        {{ form.as_p }}
+        <h1>関連メンバ：</h1>
+        <button type="submit" class="save btn btn-default">Save</button><!-- 押した後は、呼び元のVIEWに戻ります。-->
+    </form>
+    <!-- 別の方法がみつかったので以下は一旦保留します-->
+    <!-- formの外に別画面に遷移するボタンをつくればよい-->
+    <!-- pkを渡すことができるのかが不明--><!-- 以下はネットからもってきました　★引数はふたつわたせる見たいなので　以下の書き方の問題でしょうか。。-->
+    <!-- <button type=“button” onclick="location.href="{% url 'post_memberset' pk=pk %}">関連メンバ登録！</button>-->
+    <!-- 参考 <button type=“button” onclick="location.href='https://www.sejuku.net'">遷移！</button>  -->
+</div>
+{% endblock %}

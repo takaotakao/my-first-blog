@@ -1,0 +1,59 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+
+
+<div id="content" class="colM">
+<div id="content-main">
+<h2>{{ dispData.title }}
+      			  	{% if user.is_authenticated %}<!-- ユーザが認証済みであるか判定している -->
+      			  		<a href="{% url 'post_edit' pk=dispData.pk %}"><i class="fas fa-edit fa-lg"></i></a><!-- classがイラストの表示ではなかったか？？ -->
+      			  	{% endif %}
+</h2>
+
+<div class="module">
+<table id="detail">
+
+    <tbody>
+
+			     <tr>
+			      <td>記入日:</td>
+			      <td>{{ dispData.created_date }}</td>
+    			 </tr>
+			     <tr>
+			      <td>記入者:</td>
+			      <td>{{ dispData.title2 }}</td>
+    			 </tr>
+    			 <tr>
+			      <td>詳細内容:</td>
+			      <td>{{ dispData.text|linebreaksbr }}</td>
+    			 </tr>
+    			 <tr>
+			      <td>期日:</td>
+			      <td>{{ dispData.fixed_date }}</td>
+    			 </tr>
+			     <tr>
+			      <td>完了日:</td>
+			      <td>{{ dispData.compleat_date }}</td>
+				 </tr>
+				 <tr>
+				 　<td>関係者:</td><!-- postはviewでセットされています -->
+				 　<td>{{ dispData.kanren_member }}</td>
+				</tr>
+
+				<h2>追加部分その２</h2>
+				{% for must_worker in must_workers %}
+					<p>{{must_worker.name}}</p>
+				{% endfor %}
+
+</table>
+
+
+
+</div>
+</div>
+</div>
+</div>
+
+
+{% endblock %}

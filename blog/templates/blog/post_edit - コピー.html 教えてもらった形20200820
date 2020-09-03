@@ -1,0 +1,15 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+<div id="content" class="colM">
+    <h1>編集</h1>
+    <form method="POST" class="post-form">{% csrf_token %}
+        {{ form.as_p }}
+        <h1>担当者</h1>
+        <button type="submit" class="save btn btn-default">Save</button><!--これを実行したあとは呼び元のVIEWに戻る-->
+    </form>
+    {% for must_worker in must_workers %}
+        <p>{{must_worker.name}}</p>
+    {% endfor %}
+</div>
+{% endblock %}

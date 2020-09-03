@@ -1,0 +1,29 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+<div id="content" class="colM">
+    <h1>編集</h1>
+    <form method="POST" class="post-form">{% csrf_token %}
+        <h2>仮投入</h2>
+        <select multiple="multiple" size="{{must_workers_count}}" id="sample"><!--ここについてはループで表示させればよい-->
+            {% for must_worker in must_workers %}
+              <option value="option{{ forloop.counter }}">{{must_worker.name}} </option>
+            {% endfor %}
+        </select>
+
+        {{ form.as_p }}
+
+        <h2>追加部分</h2>
+        {{ formset.management_form }}<!--これはおまじない的なものだということ-->
+        {% for nnfile_form in formset %}<!--ここの名前はなんでもよいみたいですね。。-->
+            {{ nnfile_form.as_p }}
+            <hr>
+        {% endfor %}
+
+<!--上記の中でフォームに値をセットすればよい、上記をデバックして何かもどってないか確認する？-->
+        <button type="submit" class="save btn btn-default">Save</button><!--これを実行したあとは呼び元のVIEWに戻る-->
+    </form>
+
+
+</div>
+{% endblock %}

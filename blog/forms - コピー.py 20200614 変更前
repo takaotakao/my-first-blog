@@ -1,0 +1,34 @@
+import bootstrap_datepicker_plus as datetimepicker
+
+from django import forms
+
+from .models import Post
+
+class PostForm(forms.ModelForm):
+
+    class Meta:
+        model = Post
+        fields = ('title','text','title2','fixed_date','compleat_date', )
+        widgets = {
+            'fixed_date': datetimepicker.DateTimePickerInput(
+                format='%Y-%m-%d %H:%M:%S',
+                options={
+                    'locale': 'ja',
+                    'dayViewHeaderFormat': 'YYYY年 MMMM',
+                }
+            ),
+            'compleat_date': datetimepicker.DateTimePickerInput(
+                format='%Y-%m-%d %H:%M:%S',
+                options={
+                    'locale': 'ja',
+                    'dayViewHeaderFormat': 'YYYY年 MMMM',
+                }
+            ),
+        }
+        labels = {
+        	'title': 'Todoタイトル',
+        	'text': 'Todo詳細',
+        	'title2': '記入者',
+        	'fixed_date': '期日',
+        	'compleat_date': '完了日',
+        }
