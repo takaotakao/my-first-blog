@@ -61,7 +61,8 @@ h1,h2,h3,h4,h5 {
 h1 {
     margin: 0 0 20px;
     font-weight: 300;
-    font-size: 20px;
+    /*font-size: 20px;*/
+    font-size: 10px;
     color: #666;
 }
 
@@ -1015,7 +1016,7 @@ body {
     margin-top: 0;
     padding: 20px 20px 20px 40px;*/
     
-    
+    /*
     width: auto;
     height: 80px;
     padding: 10px 40px;
@@ -1023,14 +1024,21 @@ body {
     line-height: 40px;
     color: #ffc;
     overflow: hidden;
-    
-    
+    */
+    width: auto;
+    height: auto;
+    padding: 10px 40px;
+    background: #417690;
+    line-height: 40px;
+    color: #ffc;
+    overflow: hidden;
     
 }
 
 .page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
     color: #ffffff;
-    font-size: 36pt;
+    /*font-size: 36pt;*/
+    font-size: 7vmin;
     text-decoration: none;
 }
 
