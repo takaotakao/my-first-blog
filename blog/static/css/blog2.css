@@ -1,0 +1,153 @@
+
+
+
+
+#user-tools {
+    /*float: right;*/
+    padding: 0;
+    margin: 0 0 0 20px;
+    font-weight: 300;
+    font-size: 11px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    text-align: right;
+}
+
+
+
+#user-tools a {
+    /* border-bottom: 1px solid rgba(255, 255, 255, 0.25);*/
+    border-bottom: 1px solid ;/*ĎX2019.10.26*/
+    color: #fff;/*ÇÁ2019.10.26*/
+}
+
+#user-tools a:focus, #user-tools a:hover {
+    text-decoration: none;
+    border-bottom-color: #79aec8;
+    color: #79aec8;
+}
+
+#user-tools2 {
+    float: right;
+    padding: 0;
+    margin: 0 0 0 20px;
+    font-weight: 300;
+    font-size: 11px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    text-align: right;
+}
+
+.page-header {
+    /*background-color: #ff9400;
+    margin-top: 0;
+    padding: 20px 20px 20px 40px;*/
+    
+    /*
+    width: auto;
+    height: 80px;
+    padding: 10px 40px;
+    background: #417690;
+    line-height: 40px;
+    color: #ffc;
+    overflow: hidden;
+    */
+    width: auto;
+    height: auto;
+    padding: 10px 40px;
+    background: #417690;
+    line-height: 40px;
+    color: #ffc;
+   /* overflow: hidden;*/
+    
+}
+
+.page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
+    color: #ffffff;
+    /*font-size: 36pt;*/
+    font-size: 3vmin;
+    text-decoration: none;
+}
+
+.top-menu, .top-menu:hover, .top-menu:visited {
+    color: #ffffff;
+    /*float: right;*/
+    font-size: 13pt;
+    margin-right: 20px;
+    text-align: right;
+}
+
+/* BREADCRUMBS （パンくずリスト）*/
+
+div.breadcrumbs {
+    background: #79aec8;
+    padding: 10px 40px;
+    border: none;
+    font-size: 14px;
+    color: #c4dce8;
+    text-align: left;
+}
+
+div.breadcrumbs a {
+    color: #fff;
+}
+
+div.breadcrumbs a:focus, div.breadcrumbs a:hover {
+    color: #c4dce8;
+}
+
+/*表にかかるところ*/
+#content {/*表の位置が変わる*/
+    padding: 20px 40px;
+}
+/*#content-main {
+    float: left;
+    width: 100%;
+}*/
+
+/*.module table {
+    border-collapse: collapse;
+}*/
+
+/* TABLES */
+
+table {
+    border-collapse: collapse;
+    border-color: #ccc;
+}
+
+td, th {/* これをいれると線がひかれた */
+    font-size: 13px;
+    line-height: 16px;
+    border-bottom: 1px solid #eee;
+    vertical-align: top;
+    padding: 8px;
+    font-family: "Roboto", "Lucida Grande", Verdana, Arial, sans-serif;
+}
+
+th {/*あまりみためが変わらない*/
+    font-weight: 600;
+    text-align: left;
+}
+
+thead th,
+tfoot td {/*あまりみためが変わらない*/
+    color: #666;
+    padding: 5px 10px;
+    font-size: 11px;
+    background: #fff;
+    border: none;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+
+thead th {
+    padding: 5px 10px;
+    line-height: normal;
+    text-transform: uppercase;
+    background: #f6f6f6;
+}
+
+thead th a:link, thead th a:visited {
+    color: #666;
+}

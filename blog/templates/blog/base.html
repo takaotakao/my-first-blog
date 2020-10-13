@@ -5,7 +5,8 @@
     <head>
         <title>Django Girls blog2</title>
 		<link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-		<link rel="stylesheet" href="{% static 'css/blog.css' %}">
+		<!--<link rel="stylesheet" href="{% static 'css/blog.css' %}">-->
+		<link rel="stylesheet" href="{% static 'css/blog2.css' %}">
 		
 		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
 		<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
@@ -30,24 +31,25 @@
 		
     </head>
 <body>
-   
+	<div class="fixed01">
     <div class="page-header">
     	{% if user.is_authenticated %}
     	   	<!-- <a href="{% url 'post_new' %}" class="top-menu" id="user-tools"><i class="fas fa-edit fa-3x" ></i></a>-->
    			<p id="user-tools">ようこそ {{ user.username }}さん<a href="{% url 'logout' %}" id="user-tools" >／ログアウト</a></p>
    	    {% else %}
-            <a href="{% url 'login' %}" class="top-menu" id="user-tools"><i class="fas fa-sign-in-alt fa-3x"></i></a>
+            <a href="{% url 'login' %}" class="top-menu" id="user-tools2"><i class="fas fa-sign-in-alt fa-3x" ></i></a>
 		{% endif %}
-        <h1><a href="/">HTSライズCS事業部 TODOリスト</a></h1>
-
+	    <div>
+			<h1><a href="/">HTSライズCS事業部 TODOリスト</a></h1>
+	    </div>
     </div>
-    
-    <div class="breadcrumbs">ここにはパンくずリストを入れる予定</div>
 	
+
+    <div class="breadcrumbs">ここにはパンくずリストを入れる予定</div>
     
             {% block content %}
             {% endblock %}
 
-
+	</div>
 </body>
 </html>

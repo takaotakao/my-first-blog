@@ -3,13 +3,13 @@
 
 {% block content %}
 <!-- Content -->
-<div id="content" class="colM">
-<div id="content-main">
-<div class="module">
-<a href="{% url 'post_new' %}">新規作成</a>
-<a href="{% url 'post_list_Serch' id='0' %}">未完了</a>
-<a href="{% url 'post_list_Serch' id='1' %}">超過</a>
-<table id="change-history">
+<div id="content" class="colM"><!-- colMはいらないのでは -->
+<div id="content-main"><!-- いらないのでは -->
+<div class="module"><!-- いらないのでは -->
+  <a href="{% url 'post_new' %}">新規作成</a>
+  <a href="{% url 'post_list_Serch' id='0' %}">未完了</a>
+  <a href="{% url 'post_list_Serch' id='1' %}">超過</a>
+<table id="change-history"><!--"change-history"消していいのでは？-->
     <thead>
     <tr >
       <th>No</th>
@@ -31,7 +31,7 @@
 			      <td>{{ post.title2 }}</td>
 			      <td>{{ post.compleat_date }}</td>
 			      <td>
-			      <a href="{% url 'post_detail' pk=post.pk %}">詳細(仮リンク)</a><!-- 現在はこの行は効いていない -->
+			      <a href="{% url 'post_detail' pk=post.pk %}">詳細</a><!-- 現在はこの行は効いていない -->
 			      </td>
     			 </tr>
          	{% endfor %}
